@@ -1,0 +1,330 @@
+/*
+Theme Name: rtlwtf
+Theme URI: http://underscores.me/
+Author: Moriel Schottlender
+Author URI: http://moriel.smarterthanthat.com
+Description: A template specifically designed for rtl.wtf website.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rtlwtf
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+rtlwtf is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+body {
+  margin: 0;
+  direction: ltr;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #e5e5e5;
+  color: #333333;
+}
+a {
+  text-decoration: none;
+  color: #707070;
+}
+.clear {
+  clear: both;
+}
+.site-content {
+  padding: 0 1em;
+}
+.skip-link {
+  display: none;
+}
+.button-mixin {
+  display: inline-block;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #009bde;
+  background-color: #ffffff;
+  color: #009bde;
+}
+.button-mixin a {
+  color: #009bde;
+}
+.button-mixin:hover {
+  background-color: #009bde;
+  color: #ffffff;
+}
+.button-mixin:hover a {
+  color: #ffffff;
+}
+.small-info-line {
+  font-size: 0.9em;
+  color: #666666;
+}
+.small-info-line a {
+  color: #333333;
+}
+.site-header {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  -moz-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  width: 100%;
+  top: 0.5em;
+}
+.site-header .header-wrapper {
+  display: table-row;
+}
+.site-header .header-wrapper .site-branding {
+  display: table-cell;
+  vertical-align: top;
+  padding: 0 1em;
+}
+.site-header .header-wrapper .site-branding .site-title {
+  display: table-cell;
+  font-size: 1.5em;
+  padding-right: 0.5em;
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+}
+.site-header .header-wrapper .site-branding .site-title a,
+.site-header .header-wrapper .site-branding .site-title a:hover {
+  color: #009bde;
+}
+.site-header .header-wrapper .site-branding:hover .site-title {
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.site-header .header-wrapper .site-branding .site-description {
+  margin: 0;
+  font-size: 0.7em;
+  line-height: 0.9em;
+  text-align: center;
+  color: #666666;
+}
+.site-header .header-wrapper .main-navigation {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+.site-header .header-wrapper .main-navigation div > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.site-header .header-wrapper .main-navigation div > ul .current-menu-item {
+  font-weight: bold;
+}
+.site-header .header-wrapper .main-navigation div > ul .current-menu-item a {
+  color: #333333;
+}
+.site-header .header-wrapper .main-navigation div > ul > li {
+  display: inline-block;
+  padding: 1em;
+}
+.site-header .header-wrapper .main-navigation div > ul > li:hover {
+  background-color: #e8e8e8;
+}
+.site-header .header-wrapper .main-navigation div > ul > li:hover .sub-menu {
+  display: block;
+}
+.site-header .header-wrapper .main-navigation div > ul > li .sub-menu {
+  display: none;
+  list-style-type: none;
+  position: absolute;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  -moz-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  margin: 0.5em 0 0 -1em;
+  padding: 0;
+}
+.site-header .header-wrapper .main-navigation div > ul > li .sub-menu:hover {
+  display: block;
+}
+.site-header .header-wrapper .main-navigation div > ul > li .sub-menu > li {
+  display: block;
+  padding: 0.9em;
+}
+.site-header .header-wrapper .main-navigation div > ul > li .sub-menu > li:hover {
+  background-color: #e8e8e8;
+}
+.site-header .header-wrapper .main-navigation .menu-toggle {
+  display: none;
+}
+.site-header .header-wrapper .site-dir-switch {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.site-header .header-wrapper .site-dir-switch > ul {
+  width: 7em;
+  margin: 0.5em;
+  padding: 0;
+  list-style-type: none;
+}
+.site-header .header-wrapper .site-dir-switch > ul li {
+  display: inline-block;
+}
+.site-header .header-wrapper .site-dir-switch > ul li:last-child a {
+  border-left: 0;
+}
+.site-header .header-wrapper .site-dir-switch > ul li a {
+  color: #009bde;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 0.5em;
+  border: 1px solid #009bde;
+}
+.site-header .header-wrapper .site-dir-switch > ul li a :hover:not(.dir-active) {
+  background-color: #cccccc;
+}
+.site-header .header-wrapper .site-dir-switch > ul li .dir-active {
+  background-color: #009bde;
+  color: #ffffff;
+}
+.widget-area {
+  width: 15em;
+  box-sizing: border-box;
+  float: left;
+  padding: 0.5em;
+  margin-right: 1.5em;
+  border-right: 1px solid #cfcfcf;
+}
+.widget-area section {
+  -webkit-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  -moz-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
+  background-color: #ffffff;
+  border-radius: 0.5em;
+  left: 0.5em;
+  box-sizing: border-box;
+  padding: 0 0.3em;
+}
+.widget-area section .widget-title {
+  color: #009bde;
+}
+.content-area {
+  display: inline-block;
+  width: calc( 100% - 16.5em );
+}
+article .entry-title {
+  font-size: 1.8em;
+  margin: 0.2em 0;
+}
+article .entry-meta {
+  font-size: 0.9em;
+  color: #666666;
+}
+article .entry-meta a {
+  color: #333333;
+}
+article .entry-footer span {
+  display: inline-block;
+  margin: 0 1em;
+}
+.comments-area .comments-title {
+  font-size: 1.3em;
+}
+.comments-area ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.comments-area .comment-list li {
+  padding: 1em;
+  border: 1px dashed #ffffff;
+  background-color: #dddddd;
+  margin: 0.5em 0;
+}
+.comments-area .comment-list li .comment-metadata {
+  font-size: 0.9em;
+  color: #666666;
+}
+.comments-area .comment-list li .comment-metadata a {
+  color: #333333;
+}
+.comments-area .comment-list li .comment-metadata .edit-link {
+  display: inline-block;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #009bde;
+  background-color: #ffffff;
+  color: #009bde;
+  font-size: 0.9em;
+}
+.comments-area .comment-list li .comment-metadata .edit-link a {
+  color: #009bde;
+}
+.comments-area .comment-list li .comment-metadata .edit-link:hover {
+  background-color: #009bde;
+  color: #ffffff;
+}
+.comments-area .comment-list li .comment-metadata .edit-link:hover a {
+  color: #ffffff;
+}
+.comments-area .comment-list li .reply {
+  display: inline-block;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #009bde;
+  background-color: #ffffff;
+  color: #009bde;
+}
+.comments-area .comment-list li .reply a {
+  color: #009bde;
+}
+.comments-area .comment-list li .reply:hover {
+  background-color: #009bde;
+  color: #ffffff;
+}
+.comments-area .comment-list li .reply:hover a {
+  color: #ffffff;
+}
+.comments-area .comment-form .comment-form-comment label {
+  display: block;
+}
+.comments-area .comment-form .comment-form-comment textarea {
+  display: block;
+}
+.comments-area .comment-form input[type="submit"] {
+  display: inline-block;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #009bde;
+  background-color: #ffffff;
+  color: #009bde;
+}
+.comments-area .comment-form input[type="submit"] a {
+  color: #009bde;
+}
+.comments-area .comment-form input[type="submit"]:hover {
+  background-color: #009bde;
+  color: #ffffff;
+}
+.comments-area .comment-form input[type="submit"]:hover a {
+  color: #ffffff;
+}
+.site-footer {
+  margin: 1em;
+  padding: 1em;
+  border-top: 1px solid #ededed;
+  font-size: 0.9em;
+  color: #666666;
+}
+.site-footer a {
+  color: #333333;
+}

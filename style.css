@@ -1,0 +1,6 @@
+/**
+ * This is a placeholder stylesheet; the main stylesheet for rtlwtf
+ * is in css/ltr.wtf.style.css and css/rtl.wtf.style.css since
+ * both of those include the flippable rules for the template as
+ * a whole, and are included based on current site directionality.
+ */

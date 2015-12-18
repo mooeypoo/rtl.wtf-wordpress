@@ -1,0 +1,50 @@
+.comments-area {
+	.comments-title {
+		font-size: 1.3em;
+	}
+
+	ol {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.comment-list {
+
+		li {
+			padding: 1em;
+			border: 1px dashed #ffffff;
+			background-color: #dddddd;
+			margin: 0.5em 0;
+
+			.comment-metadata {
+				.small-info-line();
+
+				.edit-link {
+					.button-mixin();
+					font-size: 0.9em;
+				}
+			}
+
+			.reply {
+				.button-mixin();
+			}
+		}
+	}
+
+	.comment-form {
+		.comment-form-comment {
+			label {
+				display: block;
+			}
+
+			textarea {
+				display: block;
+			}
+		}
+
+		input[type="submit"] {
+			.button-mixin();
+		}
+	}
+}

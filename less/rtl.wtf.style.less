@@ -1,0 +1,57 @@
+/*
+Theme Name: rtlwtf
+Theme URI: http://underscores.me/
+Author: Moriel Schottlender
+Author URI: http://moriel.smarterthanthat.com
+Description: A template specifically designed for rtl.wtf website.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rtlwtf
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+rtlwtf is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+body {
+	margin: 0;
+	direction: rtl;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #e5e5e5;
+	color: #333333;
+}
+
+a {
+	text-decoration: none;
+	color: #707070;
+}
+
+.clear {
+	clear: both;
+}
+
+.site-content {
+	padding: 0 1em;
+}
+
+.skip-link {
+	display: none;
+}
+
+@import 'variables.less';
+@import 'mixins.less';
+@import 'header.less';
+@import 'sidebar.less';
+@import 'content.less';
+@import 'article/article.less';
+@import 'article/comments.less';
+@import 'footer.less';
