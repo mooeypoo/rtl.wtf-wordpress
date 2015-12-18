@@ -5,6 +5,8 @@ This is a Wordpress theme for the rtl.wtf and ltr.wtf websites. It is meant to b
 # Development
 This theme was created by Moriel Schottlender and is distributed under GPLv2 license.
 
+The initial structure of this template was created with http://underscores.me/ and was then heavily adjusted. It follows the GPLv2 license. Please see the site for full license.
+
 Please be aware that this theme is still under development and may behave unexpectedly if used in other domains!
 
 # Usage
