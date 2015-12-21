@@ -40,4 +40,20 @@ article {
 		// Yeah, I know.
 		float: left;
 	}
+
+	@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
+		// Don't float figures in mobile
+		figure {
+			display: block;
+		}
+
+		.alignright {
+			float: none;
+		}
+
+		.alignleft {
+			float: none;
+		}
+	}
+
 }

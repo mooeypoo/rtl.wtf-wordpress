@@ -165,10 +165,26 @@ a {
 .site-header .header-wrapper .main-navigation .menu-toggle {
   display: none;
 }
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
+  .site-header .header-wrapper .menu-top-menu-container {
+    display: none;
+  }
+  .site-header .header-wrapper .toggled .menu-top-menu-container {
+    display: block;
+  }
+  .site-header .header-wrapper .main-navigation .menu-toggle {
+    display: block;
+  }
+}
 .site-header .header-wrapper .site-dir-switch {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+}
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
+  .site-header .header-wrapper .site-dir-switch {
+    vertical-align: top;
+  }
 }
 .site-header .header-wrapper .site-dir-switch > ul {
   width: 7em;
@@ -218,9 +234,19 @@ a {
 .widget-area section .widget-title {
   color: #009bde;
 }
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
+  .widget-area {
+    display: none;
+  }
+}
 .content-area {
   display: inline-block;
   width: calc( 100% - 16.5em );
+}
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
+  .content-area {
+    width: 100%;
+  }
 }
 article .entry-title {
   font-size: 1.8em;
@@ -250,6 +276,17 @@ article .alignleft {
 }
 article .alignright {
   float: left;
+}
+@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
+  article figure {
+    display: block;
+  }
+  article .alignright {
+    float: none;
+  }
+  article .alignleft {
+    float: none;
+  }
 }
 .comments-area .comments-title {
   font-size: 1.3em;
@@ -336,9 +373,9 @@ article .alignright {
 .force-hover-rtl {
   border-bottom: 1px dashed #009bde;
   display: inline;
+  unicode-bidi: bidi-override;
   /* @noflip */
   direction: rtl;
-  unicode-bidi: bidi-override;
 }
 .force-hover-rtl::before {
   unicode-bidi: isolate;
@@ -349,9 +386,9 @@ article .alignright {
 .force-hover-ltr {
   border-bottom: 1px dashed #009bde;
   display: inline;
+  unicode-bidi: bidi-override;
   /* @noflip */
   direction: ltr;
-  unicode-bidi: bidi-override;
 }
 .force-hover-ltr::before {
   unicode-bidi: isolate;

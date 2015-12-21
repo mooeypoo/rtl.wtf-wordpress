@@ -113,10 +113,30 @@
 			}
 		}
 
+		// Mobile menu
+		@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
+			.menu-top-menu-container {
+				display: none;
+			}
+
+			.toggled .menu-top-menu-container {
+				display: block;
+			}
+
+			.main-navigation .menu-toggle {
+				display: block;
+			}
+
+		}
+
 		.site-dir-switch {
 			display: table-cell;
 			vertical-align: middle;
 			text-align: center;
+
+			@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
+				vertical-align: top;
+			}
 
 			> ul {
 				width: 7em;
