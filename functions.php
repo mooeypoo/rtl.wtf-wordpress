@@ -178,9 +178,10 @@ add_action( 'widgets_init', 'rtlwtf_widgets_init' );
  * Enqueue scripts and styles.
  */
 function rtlwtf_scripts() {
-	// wp_enqueue_style( 'rtlwtf-style', get_stylesheet_uri() );
-	// TODO: Include this based on directionality and domain (rtl.wtf vs ltr.wtf)
-	wp_enqueue_style( 'rtlwtf', get_template_directory_uri() . '/css/rtl.wtf.style.css', array(), '1.1', 'all');
+	$domain = strtolower( $_SERVER['SERVER_NAME'] );
+	$currDir = strpos( $domain, 'rtl') !== false ? 'rtl' : 'ltr';
+
+	wp_enqueue_style( 'rtlwtf', get_template_directory_uri() . '/css/' . $currDir . '.wtf.style.css', array(), '1.1', 'all');
 
 	wp_enqueue_script( 'rtlwtf-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

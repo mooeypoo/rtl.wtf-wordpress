@@ -13,4 +13,31 @@ article {
 			margin: 0 1em;
 		}
 	}
+
+	// Entry content elements
+	figure {
+		padding: 0.5em;
+		border: 1px dashed #ffffff;
+
+		figcaption {
+			font-size: 0.9em;
+			color: #666666;
+		}
+	}
+
+	.alignleft {
+		// 'left' should be in LTR, but we're starting with RTL
+		// so this is flipped, and will be auto-flipped by cssjanus
+		// for the LTR version.
+		// Yeah, I know.
+		float: right;
+	}
+
+	.alignright {
+		// 'left' should be in LTR, but we're starting with RTL
+		// so this is flipped, and will be auto-flipped by cssjanus
+		// for the LTR version.
+		// Yeah, I know.
+		float: left;
+	}
 }

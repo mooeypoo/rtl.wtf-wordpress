@@ -1,0 +1,33 @@
+.force-hover-rtl {
+	border-bottom: 1px dashed #009bde;
+	display: inline;
+	unicode-bidi: bidi-override;
+
+	/* @noflip */
+	direction: rtl;
+
+	&::before {
+		unicode-bidi: isolate;
+	}
+
+	&:hover {
+		unicode-bidi: normal;
+	}
+}
+
+.force-hover-ltr {
+	border-bottom: 1px dashed #009bde;
+	display: inline;
+	unicode-bidi: bidi-override;
+
+	/* @noflip */
+	direction: ltr;
+
+	&::before {
+		unicode-bidi: isolate;
+	}
+
+	&:hover {
+		unicode-bidi: normal;
+	}
+}

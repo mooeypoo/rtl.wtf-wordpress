@@ -85,6 +85,7 @@ a {
 .site-header .header-wrapper .site-branding .site-title {
   display: table-cell;
   font-size: 1.5em;
+  font-weight: bold;
   padding-left: 0.5em;
   -o-transform: rotate(-10deg);
   -ms-transform: rotate(-10deg);
@@ -236,6 +237,20 @@ article .entry-footer span {
   display: inline-block;
   margin: 0 1em;
 }
+article figure {
+  padding: 0.5em;
+  border: 1px dashed #ffffff;
+}
+article figure figcaption {
+  font-size: 0.9em;
+  color: #666666;
+}
+article .alignleft {
+  float: right;
+}
+article .alignright {
+  float: left;
+}
 .comments-area .comments-title {
   font-size: 1.3em;
 }
@@ -317,6 +332,32 @@ article .entry-footer span {
 }
 .comments-area .comment-form input[type="submit"]:hover a {
   color: #ffffff;
+}
+.force-hover-rtl {
+  border-bottom: 1px dashed #009bde;
+  display: inline;
+  /* @noflip */
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+.force-hover-rtl::before {
+  unicode-bidi: isolate;
+}
+.force-hover-rtl:hover {
+  unicode-bidi: normal;
+}
+.force-hover-ltr {
+  border-bottom: 1px dashed #009bde;
+  display: inline;
+  /* @noflip */
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+.force-hover-ltr::before {
+  unicode-bidi: isolate;
+}
+.force-hover-ltr:hover {
+  unicode-bidi: normal;
 }
 .site-footer {
   margin: 1em;

@@ -11,17 +11,23 @@
 
 // Get the current variables and push them to the chosen
 // direcitonality domain
-$params = http_build_query( $_GET );
-$params = !empty( $params ) ? '?' . $params : '';
-
 $domain = strtolower( $_SERVER['SERVER_NAME'] );
 
 // TODO: If this is used outside of the rtl.wtf and ltr.wtf domains,
 // this 'currDir' check should change to fit the local conditions
-$currDir = strpos( 'rtl', $domain ) === 0 ? 'ltr' : 'rtl';
+$currDir = strpos( $domain, 'rtl' ) !== false ? 'rtl' : 'ltr';
+$oppositeDir = $currDir === 'rtl' ? 'ltr' : 'rtl';
 $dirOptions = array( 'rtl', 'ltr' );
 
 $currSiteName = get_option("rtlwtf_option_sitename_" . $currDir);
+
+$fliplink = get_permalink();
+if ( !is_front_page() || !is_home() ) {
+	// Only add the permalink details if we're not in home or front page
+	// HACK: This is sucky. We should use a better way to give the [LTR|RTL] buttons
+	// the current link only in the 'opposite' domain.
+	$fliplink = str_replace( $currDir . '.wtf/', $oppositeDir . '.wtf/', $fliplink );
+}
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -69,7 +75,7 @@ $currSiteName = get_option("rtlwtf_option_sitename_" . $currDir);
 		if ( $d === $currDir ) {
 			echo '<a class="dir-active">' . strtoupper( $d ) . '</a>';
 		} else {
-			echo '<a href="http://' . $d . '.wtf/'. $params . '">' . strtoupper( $d ) . '</a>';
+			echo '<a href="'. $fliplink . '">' . strtoupper( $d ) . '</a>';
 		}
 		echo '</li>';
 	}
