@@ -26,6 +26,9 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
+	<?php if ( has_post_thumbnail() ) { ?>
+		<div class="entry-thumb"><?php the_post_thumbnail( 'thumbnail' ) ?></div>
+	<?php } ?>
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
@@ -33,7 +36,6 @@
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'rtlwtf' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
-
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rtlwtf' ),
 				'after'  => '</div>',
