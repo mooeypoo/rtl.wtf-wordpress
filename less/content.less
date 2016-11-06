@@ -1,9 +1,16 @@
 .content-area {
 	display: inline-block;
-	width: ~'calc( 100% -' @sidebar-width + @sidebar-margin ~')';
+	width: 100%;
+
+	.sidebarExists & {
+		width: ~'calc( 100% -' @sidebar-width + @sidebar-margin ~')';
+	}
 
 	// There's no sidebar in mobile
 	@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
-		width: 100%;
+		&,
+		.sidebarExists & {
+			width: 100%;
+		}
 	}
 }

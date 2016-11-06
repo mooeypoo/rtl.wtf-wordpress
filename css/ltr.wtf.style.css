@@ -32,6 +32,13 @@ a {
   text-decoration: none;
   color: #707070;
 }
+@media only screen and (min-width: 1048px) {
+  .site {
+    width: 1048px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 .clear {
   clear: both;
 }
@@ -80,7 +87,7 @@ a {
 .site-header .header-wrapper .site-branding {
   display: table-cell;
   vertical-align: top;
-  padding: 0 1em;
+  padding: 0.5em 1em;
 }
 .site-header .header-wrapper .site-branding .site-title {
   display: table-cell;
@@ -186,6 +193,9 @@ a {
     vertical-align: top;
   }
 }
+.site-header .header-wrapper .site-dir-switch > span {
+  font-weight: bold;
+}
 .site-header .header-wrapper .site-dir-switch > ul {
   width: 7em;
   margin: 0.5em;
@@ -234,6 +244,39 @@ a {
 .widget-area section .widget-title {
   color: #009bde;
 }
+.widget-area section .search-form {
+  text-align: center;
+}
+.widget-area section .search-form .screen-reader-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #009bde;
+}
+.widget-area section .search-form .search-field {
+  background-color: #ffffff;
+  border: 1px solid #009bde;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+.widget-area section .search-form .search-submit {
+  display: inline-block;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #009bde;
+  background-color: #ffffff;
+  color: #009bde;
+}
+.widget-area section .search-form .search-submit a {
+  color: #009bde;
+}
+.widget-area section .search-form .search-submit:hover {
+  background-color: #009bde;
+  color: #ffffff;
+}
+.widget-area section .search-form .search-submit:hover a {
+  color: #ffffff;
+}
 @media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
   .widget-area {
     display: none;
@@ -241,10 +284,14 @@ a {
 }
 .content-area {
   display: inline-block;
+  width: 100%;
+}
+.sidebarExists .content-area {
   width: calc( 100% - 16.5em );
 }
 @media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
-  .content-area {
+  .content-area,
+  .sidebarExists .content-area {
     width: 100%;
   }
 }
@@ -255,9 +302,13 @@ article .entry-title {
 article .entry-meta {
   font-size: 0.9em;
   color: #666666;
+  margin-bottom: 2em;
 }
 article .entry-meta a {
   color: #333333;
+}
+article .entry-meta .updated {
+  display: none;
 }
 article .entry-footer span {
   display: inline-block;
@@ -395,6 +446,11 @@ article .alignright {
 }
 .force-hover-ltr:hover {
   unicode-bidi: normal;
+}
+.wtf-demo-textarea {
+  width: 100%;
+  font-size: 1.5em;
+  padding: 0.5em;
 }
 .site-footer {
   margin: 1em;

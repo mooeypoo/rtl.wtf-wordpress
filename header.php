@@ -68,6 +68,7 @@ if ( !is_front_page() || !is_home() ) {
 			</nav><!-- #site-navigation -->
 
 			<div id="dirswitch" class="site-dir-switch">
+				<span>Site dir:</span>
 				<ul>
 <?php
 	foreach ( $dirOptions as $d ) {
@@ -84,5 +85,9 @@ if ( !is_front_page() || !is_home() ) {
 			</div>
 		</div>
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+<?php
+$sidebarClass = '';
+if ( is_active_sidebar( 'sidebar-1' ) ) {
+	$sidebarClass = 'sidebarExists';
+} ?>
+	<div id="content" class="site-content <?php echo $sidebarClass; ?>">

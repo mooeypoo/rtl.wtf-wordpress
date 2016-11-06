@@ -20,6 +20,28 @@
 		.widget-title {
 			color: #009bde;
 		}
+
+		.search-form {
+			text-align: center;
+
+			.screen-reader-text {
+				font-size: 1.2em;
+				font-weight: bold;
+				color: #009bde;
+			}
+
+			.search-field {
+				background-color: #ffffff;
+				border: 1px solid #009bde;
+				border-radius: 0.5em;
+				padding: 0.5em;
+				margin-bottom: 0.5em;
+			}
+
+			.search-submit {
+				.button-mixin();
+			}
+		}
 	}
 
 	// Hide the sidebar in mobile

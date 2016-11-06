@@ -35,6 +35,15 @@ a {
 	color: #707070;
 }
 
+.site {
+	// Big wide screens
+	@media only screen and (min-width: @window-width-wide) {
+		width: @window-width-wide;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 .clear {
 	clear: both;
 }

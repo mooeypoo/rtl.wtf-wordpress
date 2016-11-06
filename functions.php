@@ -194,6 +194,25 @@ function rtlwtf_scripts() {
 add_action( 'wp_enqueue_scripts', 'rtlwtf_scripts' );
 
 /**
+ * Add shortcodes for textareas and other html elements
+ */
+function textarea( $atts, $content = null ) {
+	$domain = strtolower( $_SERVER['SERVER_NAME'] );
+	$currDir = strpos( $domain, 'rtl' ) !== false ? 'rtl' : 'ltr';
+
+	extract( shortcode_atts( array(
+        "dir" => $currDir,
+        "style" => '',
+    ), $atts));
+    return '<textarea class="wtf-demo-textarea" ' .
+    	'dir="' . $atts['dir'] . '" ' .
+    	'style="' . $atts['style'] . '">' .
+    	$content .
+    	'</textarea>';
+}
+add_shortcode("textarea", "textarea");
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

@@ -4,7 +4,6 @@
 	-moz-box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
 	box-shadow: 0 0 0.5em 0 rgba(5, 5, 5, 0.2);
 	width: 100%;
-	width: 100%;
 	top: 0.5em;
 
 	.header-wrapper {
@@ -13,7 +12,7 @@
 		.site-branding {
 			display: table-cell;
 			vertical-align: top;
-			padding: 0 1em;
+			padding: 0.5em 1em;
 
 			.site-title {
 				display: table-cell;
@@ -136,6 +135,10 @@
 
 			@media only screen and (max-width: 480px), only screen and (min-width: 480px) and (max-width: 750px) {
 				vertical-align: top;
+			}
+
+			> span {
+				font-weight: bold;
 			}
 
 			> ul {
