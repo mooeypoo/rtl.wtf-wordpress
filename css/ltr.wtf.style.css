@@ -307,9 +307,6 @@ article .entry-meta {
 article .entry-meta a {
   color: #333333;
 }
-article .entry-meta .updated {
-  display: none;
-}
 article .entry-thumb {
   float: left;
   margin-right: 1em;
