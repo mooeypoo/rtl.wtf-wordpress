@@ -28,6 +28,10 @@ article {
 	figure {
 		padding: 0.5em;
 		border: 1px dashed #ffffff;
+		// Something writes a huge width into the style="" attribute
+		// of the <figure> tag; this overrides it back to being dependent
+		// on the image width itself
+		width: inherit !important;
 
 		figcaption {
 			font-size: 0.9em;

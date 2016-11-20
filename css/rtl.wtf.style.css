@@ -321,6 +321,7 @@ article .entry-footer span {
 article figure {
   padding: 0.5em;
   border: 1px dashed #ffffff;
+  width: inherit !important;
 }
 article figure figcaption {
   font-size: 0.9em;

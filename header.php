@@ -36,7 +36,7 @@ if ( !is_front_page() || !is_home() ) {
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-
+<link href="https://fonts.googleapis.com/css?family=Alef" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
 
